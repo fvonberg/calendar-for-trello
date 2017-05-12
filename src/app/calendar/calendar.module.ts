@@ -16,6 +16,10 @@ import {WeekComponent} from './week/week.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { MemberSelectorComponent } from './member-selector/member-selector.component';
 import {CutStringPipe} from "../w11k/cut-string.pipe";
+import {
+  MdInputContainer, MdInputContainerMissingMdInputError, MdOptionModule, MdSidenavModule,
+  MdTooltipModule
+} from "@angular/material";
 
 @NgModule({
   imports: [
@@ -24,6 +28,10 @@ import {CutStringPipe} from "../w11k/cut-string.pipe";
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
+    MdSidenavModule,
+    MdTooltipModule,
+    MdInputContainer,
+    MdOptionModule,
   ],
   declarations: [CalendarComponent,
     CalendarDayForMonthComponent,
