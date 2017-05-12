@@ -42,8 +42,8 @@ export const selectVisibleCards = Reselect.createSelector(
 );
 
 export const selectOverdueCards = Reselect.createSelector(
-  selectVisibleCards,
-  (cards: Card[]) => cards.filter(card => moment(card.due).isBefore(moment().hours(0).minutes(0).seconds(0).milliseconds(0)) && !card.dueComplete)
+    selectVisibleCards,
+    (cards: Card[]) => cards.filter(card => moment(card.due).isBefore(moment().hours(0).minutes(0).seconds(0).milliseconds(0)) && !card.dueComplete)
 );
 
 export const selectOpenBoards = Reselect.createSelector(

@@ -1,0 +1,33 @@
+<MainActionBar></MainActionBar>
+<RadSideDrawer #drawer
+               [transition]="sideDrawerTransition" selectionBehavior="None">
+
+    <StackLayout tkDrawerContent class="sidedrawer-left">
+        <StackLayout class="sidedrawer-header">
+            <Image class="sidedrawer-header-image img-circle" src="https://trello-avatars.s3.amazonaws.com/{{user?.avatarHash}}/50.png"></Image>
+            <Label class="sidedrawer-header-brand" [text]="user?.fullName"></Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout class="sidedrawer-content">
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" (tap)="navigateTo('/home/overdue')">
+                    <Label class="sidedrawer-list-item-icon fa" row="0" col="0" text="&#xf071;"></Label>
+                    <Label class="sidedrawer-list-item-text" row="0" col="1" text="Overdue Task"></Label>
+                </GridLayout>
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" (tap)="navigateTo('/home/about')">
+                    <Label class="sidedrawer-list-item-icon fa" row="0" col="0" text="&#xf05a;"></Label>
+                    <Label class="sidedrawer-list-item-text" row="0" col="1" text="About"></Label>
+                </GridLayout>
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" (tap)="logout()">
+                    <Label class="sidedrawer-list-item-icon fa" row="0" col="0" text="&#xf08b;"></Label>
+                    <Label class="sidedrawer-list-item-text" row="0" col="1" text="Logout"></Label>
+                </GridLayout>
+                <Label class="sidedrawer-list-item-text" text="Powered by W11K"></Label>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+    <StackLayout tkMainContent class="bg-primary">
+        <router-outlet></router-outlet>
+    </StackLayout>
+
+</RadSideDrawer>

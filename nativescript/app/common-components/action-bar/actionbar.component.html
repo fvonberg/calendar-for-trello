@@ -1,0 +1,6 @@
+<ActionBar class="action-bar" [title]="title" *ifAndroid>
+    <NavigationButton icon="res://ic_menu" (tap)="toggle()"></NavigationButton>
+</ActionBar>
+<ActionBar class="action-bar" [title]="title" *ifIos>
+    <ActionItem icon="res://ic_menu" ios.position="left" (tap)="toggle()"></ActionItem>
+</ActionBar>

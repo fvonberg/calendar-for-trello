@@ -1,0 +1,8 @@
+<MainActionBar title="Overdue Cards"></MainActionBar>
+<StackLayout class="page">
+  <ListView [items]="cards" *ngIf="cards.length > 0" class="list-group">
+    <ng-template let-card="item">
+        <calendar-card [card]="card" class="list-group-item"></calendar-card>
+    </ng-template>
+  </ListView>
+</StackLayout>

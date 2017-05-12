@@ -1,0 +1,15 @@
+<GridLayout columns="7*, 3*" rows="auto, auto" class="m-5" (tap)="openCard()">
+  <StackLayout row="0" col="0" colSpan="2">
+    <Label [text]="card.name" class="cardTitle font-weight-bold" textWrap="true"></Label>
+  </StackLayout>
+  <StackLayout row="1" col="0">
+    <Label [text]="card.dueComplete ? '✔' : card.due | date:'shortTime'"></Label>
+    <Label [text]="list?.name" class="font-italic"></Label>
+    <Label [text]="board?.name" class="body"></Label>
+  </StackLayout>
+  <FlexboxLayout flexDirection="row" row="1" col="1">
+    <ng-container *ngFor="let id of card.idMembers">
+      <Image *ngIf="getAvatar(id)" src="https://trello-avatars.s3.amazonaws.com/{{getAvatar(id)}}/50.png" width="32" height="32"></Image>
+    </ng-container>
+  </FlexboxLayout>
+</GridLayout>

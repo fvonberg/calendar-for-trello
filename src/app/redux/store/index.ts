@@ -16,8 +16,8 @@ export const enhancers = [
   persistState('members', {key: 'w11k.trello-cal/members'}),
 ];
 
-if (window.devToolsExtension) {
-  enhancers.push(window.devToolsExtension());
+if (window && (window as any).devToolsExtension) {
+  enhancers.push((window as any).devToolsExtension());
 }
 
 export interface RootState {
