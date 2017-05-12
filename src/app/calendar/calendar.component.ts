@@ -1,12 +1,12 @@
 import {Component, OnInit} from "@angular/core";
 import * as moment from "moment";
 import {Moment} from "moment";
-import {select} from "ng2-redux";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {CalendarActions, PeriodChange} from "../redux/actions/calendar-actions";
-import {SettingsActions, CalendarType} from "../redux/actions/settings-actions";
-import {TrelloPullService} from "../services/trello-pull.service";
-import {Settings} from "../models/settings";
+import {CalendarActions, PeriodChange} from "../shared/redux/actions/calendar-actions";
+import {SettingsActions, CalendarType} from "../shared/redux/actions/settings-actions";
+import {TrelloPullService} from "../shared/services/trello-pull.service";
+import {Settings} from "../shared/models/settings";
 import {MdDialog} from "@angular/material";
 import {AddCardComponent} from "./add-card/add-card.component";
 import {
@@ -14,7 +14,7 @@ import {
   selectSettingsType,
   selectCalendarDate,
   selectSettingsLanguage
-} from "../redux/store/selects";
+} from "../shared/redux/store/selects";
 
 @Component({
   selector: 'app-calendar',

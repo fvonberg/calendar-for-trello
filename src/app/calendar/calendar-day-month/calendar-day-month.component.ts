@@ -1,14 +1,14 @@
 import {Component, OnInit, Input, Renderer, ElementRef, HostListener} from "@angular/core";
-import {CalendarDay} from "../../models/calendar-day";
-import {select} from "ng2-redux";
+import {CalendarDay} from "../../shared/models/calendar-day";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {Card} from "../../models/card";
+import {Card} from "../../shared/models/card";
 import * as moment from "moment";
 import * as _ from "lodash";
-import {CardActions} from "../../redux/actions/card-actions";
+import {CardActions} from "../../shared/redux/actions/card-actions";
 import {DragDropData} from "ng2-dnd";
 import {ContextMenuService} from "../context-menu-holder/context-menu.service";
-import {selectVisibleCards} from "../../redux/store/selects";
+import {selectVisibleCards} from "../../shared/redux/store/selects";
 import Dictionary = _.Dictionary;
 
 @Component({

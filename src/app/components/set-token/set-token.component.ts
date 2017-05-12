@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {TrelloPullService} from "../../services/trello-pull.service";
+import {TrelloPullService} from "../../shared/services/trello-pull.service";
 
 @Component({
   selector: 'app-set-token',

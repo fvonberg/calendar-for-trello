@@ -1,15 +1,15 @@
 import {Component, OnInit} from "@angular/core";
-import {Card} from "../../models/card";
-import {select} from "ng2-redux";
+import {Card} from "../../shared/models/card";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {Board} from "../../models/board";
-import {TrelloHttpService} from "../../services/trello-http.service";
-import {Member} from "../../models/member";
-import {List} from "../../models/list";
+import {Board} from "../../shared/models/board";
+import {TrelloHttpService} from "../../shared/services/trello-http.service";
+import {Member} from "../../shared/models/member";
+import {List} from "../../shared/models/list";
 import * as moment from "moment";
 import {MdDialogRef} from "@angular/material";
 import {FormGroup, Validators, FormBuilder} from "@angular/forms";
-import {selectOpenBoards} from "../../redux/store/selects";
+import {selectOpenBoards} from "../../shared/redux/store/selects";
 
 
 @Component({

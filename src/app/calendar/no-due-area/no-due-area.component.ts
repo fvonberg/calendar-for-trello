@@ -1,8 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {Observable, Subscription} from "rxjs";
-import {Card} from "../../models/card";
-import {select} from "ng2-redux";
-import {selectVisibleCards} from "../../redux/store/selects";
+import {Card} from "../../shared/models/card";
+import {select} from "@angular-redux/store";
+import {selectVisibleCards} from "../../shared/redux/store/selects";
 
 @Component({
   selector: 'app-no-due-area',

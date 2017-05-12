@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, ElementRef, Renderer} from "@angular/core";
 import {Subject, Observable, Subscription} from "rxjs";
-import {select} from "ng2-redux";
-import {Card} from "../../models/card";
+import {select} from "@angular-redux/store";
+import {Card} from "../../shared/models/card";
 
 @Component({
   selector: 'app-search',

@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 import {NgRedux} from "@angular-redux/store";
 import {NgReduxRouter} from "@angular-redux/router";
-import {RootState} from "./redux/store/index";
-import reducer from "../app/redux/reducers/index";
-import {Settings} from "./models/settings";
-import {TrelloPullService} from "./services/trello-pull.service";
+import {RootState} from "./shared/redux/store/index";
+import reducer from "./shared/redux/reducers/index";
+import {Settings} from "./shared/models/settings";
+import {TrelloPullService} from "./shared/services/trello-pull.service";
 
 @Component({
     selector: "ns-app",

@@ -1,8 +1,8 @@
 import {RouterModule, Routes} from '@angular/router';
 import {FrontPageComponent} from "./front-page/front-page.component";
 import {SetTokenComponent} from "./components/set-token/set-token.component";
-import {MemberGuard} from "./services/guards/memberGuard";
-import {VisitorGuard} from "./services/guards/visitorGuard";
+import {MemberGuard} from "./shared/services/guards/memberGuard";
+import {VisitorGuard} from "./shared/services/guards/visitorGuard";
 import {SettingsComponent} from "./settings/settings.component";
 import {CalendarComponent} from "./calendar/calendar.component";
 import {AboutPageComponent} from "./about/about-page/about-page.component";

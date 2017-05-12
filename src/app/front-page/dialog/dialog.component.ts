@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TrelloAuthService} from "../../services/trello-auth.service";
+import {TrelloAuthService} from "../../shared/services/trello-auth.service";
 import {Router} from "@angular/router";
 import {MdDialogRef} from "@angular/material";
 

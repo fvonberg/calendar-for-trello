@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {TrelloPullService} from "../services/trello-pull.service";
+import {TrelloPullService} from "../shared/services/trello-pull.service";
 import {Observable, ReplaySubject, Subject, Subscription} from "rxjs";
 
 @Component({

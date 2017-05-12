@@ -1,8 +1,8 @@
 import {Component, OnInit, Input} from "@angular/core";
-import {select} from "ng2-redux";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {User} from "../models/user";
-import {MenuItem} from "../models/menu-item";
+import {User} from "../shared/models/user";
+import {MenuItem} from "../shared/models/menu-item";
 import {MdSidenav} from "@angular/material";
 
 @Component({

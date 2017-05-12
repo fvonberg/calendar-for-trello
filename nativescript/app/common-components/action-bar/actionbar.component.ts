@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { DrawerService } from "../../services/nativescript/drawer.service";
+import { DrawerService } from "../../services/drawer.service";
 
 @Component({
   moduleId: module.id,

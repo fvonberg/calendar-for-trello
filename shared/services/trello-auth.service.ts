@@ -1,11 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
-import {BoardActions} from "../redux/actions/board-actions";
-import {UserActions} from "../redux/actions/user-actions";
-import {CardActions} from "../redux/actions/card-actions";
 import {RootState} from "../redux/store/index";
-import {NgRedux} from "ng2-redux";
-const config = require("../../config.json");
+import {NgRedux} from "@angular-redux/store";
+const config = require("../config.json");
 
 @Injectable()
 export class TrelloAuthService {

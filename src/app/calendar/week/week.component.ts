@@ -1,14 +1,14 @@
 import {Component, OnInit} from "@angular/core";
 import * as moment from "moment";
-import {Card} from "../../models/card";
-import {select} from "ng2-redux";
+import {Card} from "../../shared/models/card";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {CalendarDay} from "../../models/calendar-day";
-import {DateTimeFormatService} from "../../services/date-time-format.service";
+import {CalendarDay} from "../../shared/models/calendar-day";
+import {DateTimeFormatService} from "../../shared/services/date-time-format.service";
 import {DragDropData} from "ng2-dnd";
-import {CardActions} from "../../redux/actions/card-actions";
+import {CardActions} from "../../shared/redux/actions/card-actions";
 import {WeekDaySlot} from "./WeekDaySlot";
-import {selectCalendarDays, selectSettingsLanguage, selectVisibleCards} from "../../redux/store/selects";
+import {selectCalendarDays, selectSettingsLanguage, selectVisibleCards} from "../../shared/redux/store/selects";
 
 @Component({
   selector: 'app-week',

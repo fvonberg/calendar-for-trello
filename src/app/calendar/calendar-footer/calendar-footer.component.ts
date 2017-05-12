@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DragDropData} from "ng2-dnd";
-import {CardActions} from "../../redux/actions/card-actions";
-import {Card} from "../../models/card";
+import {CardActions} from "../../shared/redux/actions/card-actions";
+import {Card} from "../../shared/models/card";
 
 @Component({
   selector: 'app-calendar-footer',

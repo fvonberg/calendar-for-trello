@@ -4,8 +4,8 @@ import app = require("application");
 import platform = require("platform");
 import {Router} from "@angular/router";
 import {LOGIN_CONFIG, TrelloTokenService} from "../../services/trello-token.service";
-import {TrelloPullService} from "../../services/trello-pull.service";
-declare const android: any;
+import {TrelloPullService} from "../../shared/services/trello-pull.service";
+const config = require("../../shared/config.json");
 
 @Component({
     selector: "ns-login",
@@ -15,7 +15,7 @@ declare const android: any;
 export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
     @ViewChild('webView') webView: ElementRef;
-    trelloLoginSrc = 'https://trello.com/1/authorize?response_type=token&key=' + LOGIN_CONFIG.apiKey +
+    trelloLoginSrc = 'https://trello.com/1/authorize?response_type=token&key=' + config.apiKey +
         '&return_url='+ LOGIN_CONFIG.redirectUrl +
         '&callback_method=fragment&scope=read%2Cwrite%2Caccount&expiration=30days&name=Calendar+for+Trello';
 

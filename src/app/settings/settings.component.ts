@@ -1,12 +1,12 @@
 import {Component, OnInit} from "@angular/core";
-import {select} from "ng2-redux";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {Board} from "../models/board";
-import {SettingsActions} from "../redux/actions/settings-actions";
+import {Board} from "../shared/models/board";
+import {SettingsActions} from "../shared/redux/actions/settings-actions";
 import {Language} from "./language";
-import {Settings} from "../models/settings";
+import {Settings} from "../shared/models/settings";
 import * as moment from "moment";
-import {selectOpenBoards} from "../redux/store/selects";
+import {selectOpenBoards} from "../shared/redux/store/selects";
 
 @Component({
   selector: 'app-board-settings',

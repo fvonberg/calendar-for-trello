@@ -1,16 +1,14 @@
 import {Injectable} from "@angular/core";
 import {Http, Request, RequestOptionsArgs, Response, RequestMethod} from "@angular/http";
 import {Observable} from "rxjs";
-import {TrelloTokenService} from "./trello-token.service";
-const config = {
-  "apiKey": "41485cd87d154168dd6db06cdd3ffd69"
-};
+import {TrelloAuthService} from "./trello-auth.service";
+const config = require("../config.json");
 
 @Injectable()
 export class TrelloHttpService {
 
 
-  constructor(public http: Http, private trelloTokenService: TrelloTokenService) {
+  constructor(public http: Http, private trelloAuthService: TrelloAuthService) {
   }
 
   get(url: string, opts?: Request, params?: string): Observable<Response> {
@@ -55,7 +53,7 @@ export class TrelloHttpService {
 
 
   private _request(url: string, options: RequestOptionsArgs, params?: string): Observable<Response> {
-    let token = this.trelloTokenService.getToken();
+    let token = this.trelloAuthService.getToken();
     if (!token) {
       return Observable.throw('No Token Provided!');
     }

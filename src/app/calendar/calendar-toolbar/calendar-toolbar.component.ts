@@ -1,9 +1,9 @@
 import {Component, OnInit} from "@angular/core";
 import * as moment from "moment";
-import {select} from "ng2-redux";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
 import * as _ from "lodash";
-import {selectSettingsLanguage} from "../../redux/store/selects";
+import {selectSettingsLanguage} from "../../shared/redux/store/selects";
 
 @Component({
   selector: 'app-calendar-toolbar',

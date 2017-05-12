@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core";
-import {select} from "ng2-redux";
-import {Member} from "../../models/member";
+import {select} from "@angular-redux/store";
+import {Member} from "../../shared/models/member";
 import {Observable, Subscription} from "rxjs";
-import {SettingsActions} from "../../redux/actions/settings-actions";
-import {Settings} from "../../models/settings";
-import {MemberMap} from "../../redux/reducers/member.reducer";
+import {SettingsActions} from "../../shared/redux/actions/settings-actions";
+import {Settings} from "../../shared/models/settings";
+import {MemberMap} from "../../shared/redux/reducers/member.reducer";
 
 @Component({
   selector: 'app-member-selector',

@@ -1,10 +1,10 @@
 import { Component, ViewChild, OnInit, OnDestroy } from "@angular/core";
 import {TrelloTokenService} from "../../services/trello-token.service";
 import {Router} from "@angular/router";
-import { DrawerService } from "../../services/nativescript/drawer.service";
+import { DrawerService } from "../../services/drawer.service";
 import { RadSideDrawerComponent } from "nativescript-telerik-ui/sidedrawer/angular";
 import { Observable } from "rxjs/Observable";
-import { User } from "../../models/user";
+import { User } from "../../shared/models/user";
 import { Subscription } from "rxjs";
 import {select} from "@angular-redux/store";
 

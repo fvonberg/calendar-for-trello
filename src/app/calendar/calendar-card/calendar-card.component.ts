@@ -1,12 +1,12 @@
 import {Component, OnInit, Input, HostBinding} from "@angular/core";
-import {Card} from "../../models/card";
-import {select} from "ng2-redux";
+import {Card} from "../../shared/models/card";
+import {select} from "@angular-redux/store";
 import {Observable, Subscription} from "rxjs";
-import {Board} from "../../models/board";
+import {Board} from "../../shared/models/board";
 import * as _ from "lodash";
-import {List} from "../../models/list";
-import {selectBoardColorPrefs} from "../../redux/store/selects";
-import {MemberMap} from "../../redux/reducers/member.reducer";
+import {List} from "../../shared/models/list";
+import {selectBoardColorPrefs} from "../../shared/redux/store/selects";
+import {MemberMap} from "../../shared/redux/reducers/member.reducer";
 
 @Component({
   selector: 'app-calendar-card',
